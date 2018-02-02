@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>Document</title>
+
+    <style>
+
+    body{
+        height:700px;
+        margin:0;
+    }
+
+    .container{
+        margin-top:200px;
+        height:200px;
+        width:100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .board{
+        height:100px;
+        width:98px;
+        border:1px solid black;
+        margin:10px;
+        text-align: center;
+        border-radius: 50px;
+
+    }
+
+    #c{
+        background-color: blue;
+    }
+
+    #d{
+        background-color: green;
+    }
+
+    #e{
+        background-color: yellow;
+    }
+
+    #f{
+        background-color: orange;
+    }
+
+    #g{
+        background-color: pink;
+    }
+
+    #a{
+        background-color: purple;
+    }
+
+    #b{
+        background-color: red;
+    }
+
+    #c:hover{
+        background-color: red;
+    }
+
+    #d:hover{
+        background-color: pink;
+    }
+
+    #e:hover{
+        background-color: black;
+    }
+
+    #f:hover{
+        background-color: red;
+    }
+
+    #g:hover{
+        background-color: red;
+    }
+
+    #a:hover{
+        background-color: green;
+    }
+
+    #b:hover{
+        background-color: orange;
+    }
+
+    </style>
+
+    <script>
+    
+    $(document).ready(function(){
+
+        $(document).keypress(function(){
+
+            key = String.fromCharCode(event.which);
+            
+            switch(key){
+
+                case "q":
+                    mittLjud1.currentTime = 0;
+                    mittLjud1.play();    
+                break;
+
+                case "w":
+                    mittLjud2.currentTime = 0;
+                    mittLjud2.play();
+                break;
+
+                case "e":
+                    mittLjud3.currentTime = 0;
+                    mittLjud3.play();
+                break;
+
+                case "a":
+                    mittLjud4.currentTime = 0;
+                    mittLjud4.play();
+                break;
+
+                case "s":
+                    mittLjud5.currentTime = 0;
+                    mittLjud5.play();
+                break;
+
+                case "d":
+                    mittLjud6.currentTime = 0;
+                    mittLjud6.play();
+                break;
+
+                case "f":
+                    mittLjud7.currentTime = 0;
+                    mittLjud7.play();
+                break;  
+
+                default:          
+
+            }
+            
+
+        });
+
+        
+
+        $("#c").mouseover(function(){
+            var mittLjud = document.getElementById("mittLjud1");
+            mittLjud.currentTime = 0;
+            mittLjud.play();
+        });
+
+        $("#d").mouseover(function(){
+            var mittLjud = document.getElementById("mittLjud2");
+            mittLjud.currentTime = 0;
+            mittLjud.play();
+        });
+
+        $("#e").mouseover(function(){
+            var mittLjud = document.getElementById("mittLjud3");
+            mittLjud.currentTime = 0;
+            mittLjud.play();
+        });
+
+        $("#f").mouseover(function(){
+            var mittLjud = document.getElementById("mittLjud4");
+            mittLjud.currentTime = 0;
+            mittLjud.play();
+        });
+
+        $("#g").mouseover(function(){
+            var mittLjud = document.getElementById("mittLjud5");
+            mittLjud.currentTime = 0;
+            mittLjud.play();
+        });
+
+        $("#a").mouseover(function(){
+            var mittLjud = document.getElementById("mittLjud6");
+            mittLjud.currentTime = 0;
+            mittLjud.play();
+        });
+
+        $("#b").mouseover(function(){
+            var mittLjud = document.getElementById("mittLjud7");
+            mittLjud.currentTime = 0;
+            mittLjud.play();
+        });
+
+    });
+    
+    </script>
+</head>
+<body>
+
+    <audio id="mittLjud1">
+            <source src="sound/synth_c_note.wav" type="audio/wav"></source>
+        </audio>
+
+        <audio id="mittLjud2">
+                <source src="sound/synth_d_note.wav" type="audio/wav"></source>
+            </audio>
+
+            <audio id="mittLjud3">
+                    <source src="sound/synth_e_note.wav" type="audio/wav"></source>
+                </audio>
+
+                <audio id="mittLjud4">
+                        <source src="sound/synth_f_note.wav" type="audio/wav"></source>
+                    </audio>
+
+                    <audio id="mittLjud5">
+                            <source src="sound/synth_g_note.wav" type="audio/wav"></source>
+                        </audio>
+
+                        <audio id="mittLjud6">
+                                <source src="sound/synth_a_note.wav" type="audio/wav"></source>
+                            </audio>
+
+                            <audio id="mittLjud7">
+                                    <source src="sound/synth_b_note.wav" type="audio/wav"></source>
+                                </audio>
+    
+    
+    <div class="container">                              
+
+        <div class="board" id="c">
+            C
+        </div>
+
+        <div class="board" id="d">
+            D    
+        </div>
+
+        <div class="board" id="e">
+            E    
+        </div>
+
+        <div class="board" id="f">
+            F    
+        </div>
+
+        <div class="board" id="g">
+            G    
+        </div>
+
+        <div class="board" id="a">
+            A               
+        </div>
+
+        <div class="board" id="b">
+            B    
+        </div>
+
+    </div>  
+    
+</body>
+</html>
